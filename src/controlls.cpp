@@ -1,4 +1,7 @@
 #include <controlls.h>
+#ifndef VISIONAREA
+#define VISIONAREA 5
+#endif
 int Controlls::getDoors( char *drs, int countDrs )
 {
     this->pDoors = drs;
@@ -29,6 +32,16 @@ int Controlls::start()
                 hmn.getX( i );
                 hmn.getY( j );
             }
-
+    hmn.Init( VISIONAREA );
     return 0;
+}
+
+int Controlls::clear()
+{
+    hmn.Clear( VISIONAREA );
+}
+
+int Controlls::lookAround();
+{
+    
 }

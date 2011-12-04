@@ -5,8 +5,10 @@ class Controlls
         Human hmn;
         int getDoors(char *drs, int countDrs); //get doors array
         int getMap(char **mp, int countMp1, int countMp2); //get map array
+        int lookAround();
         int lookDoor(char door); //search next door
         int start(); //init XY
+        int clear();
     private:
         char *pDoors;
         char **pMap;
