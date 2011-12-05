@@ -41,7 +41,26 @@ int Controlls::clear()
     hmn.Clear( VISIONAREA );
 }
 
-int Controlls::lookAround();
+void* Controlls::lookAround()
 {
-    
+    int area = VISIONAREA / 2;
+    int k1 = area, k2 = area;
+    for( int i = 0; i < VISIONAREA; ++ i )
+    {
+        for( int j = 0; j < VISIONAREA; ++ j )
+        {
+            if( (hmn.y - k2 >= 0) && (hmn.x - k1 >= 0) )
+            {
+                hmn.visArea[i][j] = hmn.visArea[i - k1][j - k2];
+            }
+            else
+            {
+                hmn.visArea[i][j] = '*';
+            }
+            -- k2;
+        }
+        -- k1;
+        k2 = area;
+    }
+    return (void *)hmn.visArea;
 }

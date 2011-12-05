@@ -1,11 +1,11 @@
-#include <human.h>
+#include <nwchuman.h>
 class Controlls
 {
     public:
-        Human hmn;
+        nwcHuman hmn;
         int getDoors(char *drs, int countDrs); //get doors array
         int getMap(char **mp, int countMp1, int countMp2); //get map array
-        int lookAround();
+        void* lookAround();
         int lookDoor(char door); //search next door
         int start(); //init XY
         int clear();
