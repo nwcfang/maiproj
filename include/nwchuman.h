@@ -1,4 +1,5 @@
-
+#ifndef HUMAN_h
+#define HUMAN_H
 class nwcHuman
 {
     public:
@@ -10,3 +11,4 @@ class nwcHuman
         int y; //current coordinate Y
         char **visArea; //human scope
 };
+#endif

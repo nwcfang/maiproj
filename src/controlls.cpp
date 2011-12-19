@@ -1,7 +1,4 @@
-#ifndef CONTROLLS_H
-#define CONTROLLS_H
-#include <controlls.h>
-#endif
+#include "controlls.h"
 
 #ifndef VISIONAREA
 #define VISIONAREA 5
@@ -59,7 +56,7 @@ int Controlls::lookAround()
     {
         for( int j = 0; j < VISIONAREA; ++ j )
         {
-            if( (y - k2 >= 0) && (x - k1 >= 0) )
+            if( (hmn.y - k2 >= 0) && (hmn.x - k1 >= 0) )
             {
                 visArea[i][j] = pMap[i - k1][j - k2];
             }
